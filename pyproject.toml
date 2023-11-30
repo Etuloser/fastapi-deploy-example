@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "fastapi-deploy-example"
+version = "0.1.0"
+description = ""
+authors = ["Eles <1494136313@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
+black = "^23.11.0"
+fastapi = "^0.104.1"
+uvicorn = "^0.24.0.post1"
+pydantic = "^2.5.2"
+pydantic-settings = "^2.1.0"
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "http://mirrors.cloud.aliyuncs.com/pypi/simple/"
+priority = "default"
+
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# pytest
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+    "integration",
+]
