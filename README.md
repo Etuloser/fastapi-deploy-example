@@ -51,3 +51,7 @@ a = Analysis(
 
 `datas`中配置包内文件夹映射关系，解决自己写的包找不到的问题
 `hiddenimports`配置第三方包找不到的问题
+
+
+## TODO
+* gunicorn
